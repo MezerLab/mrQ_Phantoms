@@ -1,8 +1,9 @@
 How to Scan , Organize the files and preform the Analysis:
 
-mrQ_Phantom is a tool in order to create a T1 and PD' map with minimzied B1+ and B1- biases.
-
+mrQ_phantom is a software package designed to calculate MR parameters (T1 and PD) using spoiled gradient echo scans (SPGR, FLASH) and Spin -Echo Inversion Recovery( SEIR).
+This code ia a modification for mrQ
 For that purposes: 
+It is necessary to have https://github.com/mezera/mrQ tool box (with all the relevant repositories) for this code to work
 
 1. Create a phantom with samples in a box, where the area around the samples is filled with Agar-Gd (see paper for more details)
 2. SEIR-GS scan with at least 4 invertion recovery (recomanded parameters as detailed in the paper)
@@ -35,3 +36,11 @@ For that purposes:
        Use only slices that have Agar-Gd lables as well( before the analysis).
 
 In order to calculate WF map, find the median value of the water samples for PD.Then normalize the PD map to the median of the water samples.
+
+
+
+
+
+For more information, please contact:
+Oshrat Shtangel: oshrat.shtangel(AT)mail.huji.ac.il
+Aviv Mezer: aviv.mezer(AT)elsc.huji.ac.il
