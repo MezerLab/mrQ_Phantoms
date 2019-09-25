@@ -1,6 +1,6 @@
 How to Scan , Organize the files and preform the Analysis:
 
-mrQ_phantom is a to tools in order to create a T1 and PD' map with minimzied B1+ and B1- biases.
+mrQ_Phantom is a tool in order to create a T1 and PD' map with minimzied B1+ and B1- biases.
 
 For that purposes: 
 
@@ -15,23 +15,23 @@ For that purposes:
 6. Run mrQ_phantom_run in 2 steps:
    
    Step #1:Step 1 do initiation and creats important structurs for mrQ_phantom and Nifti fiels of the data.
-         After Step #1 is finishes, use one of the Nifti SEIR files( for exmaple SEIR in 50 ms) and create a mask for Agar-Gd area that is labled=1.
-         ( we manualy segmented the agar with the use of Itk-gray sotware) .
-         (Now you have one-slice of agar-gs segmeted( usally one slice-but poosible to scan couple of slices )
+     After Step #1 is finishes, use one of the Nifti SEIR files( for exmaple SEIR in 50 ms) and create a mask for Agar-Gd area that is labled=1.
+       (we manualy segmented the agar with the use of Itk-gray sotware) .
+       (Now you have one-slice of agar-gs segmeted( usally one slice-but poosible to scan couple of slices )
 
-           Next, use one of the Nifti SPGR files in one FA( for example fa=10) and segmet the Agar-Gd in the whole volume labeld as=1.
-           (Now you have multi slices mask for the spgr)
+       Next, use one of the Nifti SPGR files in one FA( for example fa=10) and segmet the Agar-Gd in the whole volume labeld as=1.
+       (Now you have multi slices mask for the spgr)
            
 
  
    Step 2: Do the B1+ and B1- correction and created a final T1 and PD maps.
 
-                The final T1 map is called T1nlFit.nii.gz
-                The final PD map is caled PD.nii.gz
+       The final T1 map is called T1_WL_last.nii.gz
+       The final PD map is caled PD.nii.gz
 
-               other outputs are Gain.nii.gz for the gain, and B1_smooths.nii.gz which is the b1 after smooting the while area.
+       other outputs are Gain.nii.gz for the gain, and B1_smooths.nii.gz which is the B1+ after smooting the whole area .
 
-      In order to preform analysis on the samples please add to the SPGR-mask more labels of the samples, starting from 2>
+      In order to preform analysis on the samples please add to the SPGR_mask more labels of the samples, starting from 2>
        Use only slices that have Agar-Gd lables as well( before the analysis).
 
 In order to calculate WF map, find the median value of the water samples for PD.Then normalize the PD map to the median of the water samples.
